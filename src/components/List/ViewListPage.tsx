@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { Grid, Container, List, ListItem, Paper, Typography, makeStyles, ListItemText, ListItemSecondaryAction, IconButton, TextField, Button, ListItemIcon, Checkbox } from '@material-ui/core'
 import { TListItem, TViewListItem } from './types'
 import DeleteIcon from '@material-ui/icons/Delete';
-import { RouteComponentProps } from 'react-router-dom';
+import { RouteComponentProps, Link as RouterLink  } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
     paper: {
@@ -83,6 +83,7 @@ const ViewListPage: React.FC<TProps> = (props) => {
                         ))}
                     </List>
                     <Button variant="contained" color="primary" fullWidth onClick={handleSave}>Save</Button>
+                    <Button color="secondary" fullWidth component={RouterLink} to="/">Cancel</Button>
                 </Paper>
             </Grid>
         </Container>

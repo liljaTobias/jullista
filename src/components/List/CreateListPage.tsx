@@ -4,6 +4,8 @@ import { TListItem } from './types'
 import DeleteIcon from '@material-ui/icons/Delete';
 import AddIcon from '@material-ui/icons/Add';
 
+import { Link as RouterLink } from 'react-router-dom'
+
 const useStyles = makeStyles((theme) => ({
     paper: {
         marginTop: theme.spacing(8),
@@ -68,6 +70,7 @@ const CreateListPage = () => {
                             </ListItemSecondaryAction>
                         </ListItem>
                     </List>
+                    <Button color="secondary" component={RouterLink} to="/">Cancel</Button>
                 </Paper>
             </Grid>
         </Container>
