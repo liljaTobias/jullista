@@ -1,5 +1,6 @@
 import React from 'react'
 
+import { Link as RouterLink } from 'react-router-dom'
 import { Box, Button, Grid, makeStyles, Paper, TextField, Typography } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
@@ -18,7 +19,9 @@ const LoginPage = () => {
         <Grid container direction="column" alignItems="center" justify="center" style={{ minHeight: '100vh'}}>
             <Paper elevation={3} className={classes.paper}>
                 <Typography gutterBottom variant="h3">Create a new list</Typography>
-                <Button color="primary" variant="contained" fullWidth>Create</Button>
+                <Button color="primary" variant="contained" fullWidth component={RouterLink} to="/create">Create</Button>
+                <Typography gutterBottom variant="h3">View a existing list</Typography>
+                <Button color="primary" variant="contained" fullWidth component={RouterLink} to="/list/1">Goto</Button>
             </Paper>
         </Grid>
     )
